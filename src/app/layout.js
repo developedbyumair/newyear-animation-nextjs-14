@@ -1,9 +1,5 @@
 import ThemeRegistry from "@/components/ThemeRegistry/ThemeRegistry";
-import DashboardIcon from "@mui/icons-material/Dashboard";
-import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import "./globals.css";
 
 export const metadata = {
