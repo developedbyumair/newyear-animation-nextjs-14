@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:700|Pacifico");
-
+/* Reset CSS */
 *,
 *:after,
 *:before {
@@ -12,6 +12,7 @@
 html {
   background: #000000;
 }
+/* Other initial styles */
 .feliz {
   width: 100%;
   font-family: "Pacifico", cursive;
@@ -23,7 +24,10 @@ html {
   top: 50%;
   opacity: 0;
   animation: vem_feliz 2s ease-in-out 7s forwards;
+  /* position: relative; */
+  overflow: hidden; /* Hides the stars initially */
 }
+
 .ano_novo {
   position: absolute;
   top: 0;
@@ -43,6 +47,91 @@ html {
   font-weight: 700;
   color: #7a8fe8;
 }
+
+/* Breakpoint 600px */
+@media (min-width: 600px) {
+  /* Adjustments for 600px */
+  .feliz {
+    font-size: 70px;
+  }
+
+  .ano_novo > div {
+    font-size: 120px;
+  }
+
+  /* Other element adjustments */
+  .ano_novo {
+    padding: 100px 20px 0px 20px;
+    margin-left: -2rem;
+  }
+
+  .seis,
+  .sete {
+    margin-right: -100px;
+  }
+
+  .balao {
+    margin-top: -100px;
+    margin-right: -100px;
+  }
+}
+
+/* Breakpoint 800px */
+@media (min-width: 800px) {
+  /* Adjustments for 800px */
+  .feliz {
+    font-size: 65px;
+  }
+
+  .ano_novo > div {
+    font-size: 140px;
+  }
+
+  /* Other element adjustments */
+  .ano_novo {
+    padding: 120px 40px 0px 40px;
+  }
+
+  .seis,
+  .sete {
+    margin-right: -120px;
+  }
+
+  .balao {
+    margin-top: -120px;
+    margin-right: -120px;
+  }
+
+  /* Add more element-specific adjustments */
+}
+
+/* Breakpoint 1200px */
+@media (min-width: 1200px) {
+  /* Adjustments for 1200px */
+  .feliz {
+    font-size: 100px;
+  }
+
+  .ano_novo > div {
+    font-size: 150px;
+  }
+
+  /* Other element adjustments */
+  .ano_novo {
+    padding: 150px 60px 0px 30px;
+  }
+
+  .seis,
+  .sete {
+    margin-right: -150px;
+  }
+
+  .balao {
+    margin-top: -150px;
+    margin-right: -150px;
+  }
+}
+
 div.seis {
   position: absolute;
   top: 50%;
@@ -108,6 +197,32 @@ div.sete:before {
   left: 50%;
   margin-left: -2px;
   bottom: -110px;
+}
+/* Breakpoint 1600px */
+@media (min-width: 1600px) {
+  /* Adjustments for 1600px */
+  .feliz {
+    font-size: 110px;
+  }
+
+  .ano_novo > div {
+    font-size: 170px;
+  }
+
+  /* Other element adjustments */
+  .ano_novo {
+    padding: 180px 80px 0px 0px;
+  }
+
+  .seis,
+  .sete {
+    margin-right: -180px;
+  }
+
+  .balao {
+    margin-top: -180px;
+    margin-right: -180px;
+  }
 }
 .fogos {
   width: 100%;
@@ -185,6 +300,7 @@ div.sete:before {
   top: -15px;
   right: 10px;
 }
+
 a.author {
   font-size: 12px;
   text-decoration: none;
@@ -194,6 +310,34 @@ a.author {
   right: 10px;
 }
 
+/* Breakpoint 1800px */
+@media (min-width: 1800px) {
+  /* Adjustments for 1800px */
+  .feliz {
+    font-size: 120px;
+  }
+
+  .ano_novo > div {
+    font-size: 175px;
+  }
+
+  /* Other element adjustments */
+  .ano_novo {
+    padding: 200px 100px 0px 0px;
+  }
+
+  .seis,
+  .sete {
+    margin-right: -200px;
+  }
+
+  .balao {
+    margin-top: -200px;
+    margin-right: -200px;
+  }
+}
+
+/* All keyframes */
 @keyframes vem_2017 {
   0% {
     right: 0%;
@@ -298,5 +442,13 @@ a.author {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes glowingStar {
+  0% {
+    text-shadow: 0 0 5px #f5cc06;
+  }
+  100% {
+    text-shadow: 0 0 20px #f5cc06;
   }
 }

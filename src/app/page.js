@@ -9,9 +9,9 @@ export default function HomePage() {
           top: ["20%", "50%"],
         }}
       >
-        Let Enter the New Year
+        Lets Enter the New Year
       </Box>
-      <Box className="ano_novo">
+      <Box className="ano_novo star">
         <Box>202</Box>
         <Box className="seis">3</Box>
         <Box className="sete">4</Box>
