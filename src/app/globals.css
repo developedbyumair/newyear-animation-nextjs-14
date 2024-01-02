@@ -30,10 +30,7 @@ css variables
   top: 50%;
   opacity: 0;
   animation: vem_feliz 2s ease-in-out 7s forwards;
-  /* position: relative; */
-  overflow: hidden; /* Hides the stars initially */
 }
-
 .ano_novo {
   position: absolute;
   top: 0;
@@ -406,6 +403,16 @@ a.author {
     opacity: 1;
   }
 }
+
+/* Additional keyframes to trigger the falling stars */
+@keyframes triggerFallingStars {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes solta_fogos {
   0% {
     margin-top: 100%;
@@ -450,11 +457,56 @@ a.author {
     opacity: 1;
   }
 }
-@keyframes glowingStar {
+
+.five-pointed-star {
+  --star-color: orange;
+  font-size: 1rem;
+  position: fixed;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-right: 1em solid transparent;
+  border-bottom: 0.7em solid var(--star-color);
+  border-left: 1em solid transparent;
+  transform: rotate(35deg);
+  animation: falling 5s linear infinite;
+  transition: transform 0.3s ease-in-out; /* Add transition for falling effect */
+  left: calc(100vw * var(--random-x)); /* Random horizontal position */
+  top: calc(-100vh * var(--random-y)); /* Start above the viewport */
+}
+.five-pointed-star:before {
+  border-bottom: 0.8em solid var(--star-color);
+  border-left: 0.3em solid transparent;
+  border-right: 0.3em solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -0.45em;
+  left: -0.65em;
+  display: block;
+  content: "";
+  transform: rotate(-35deg);
+}
+.five-pointed-star:after {
+  position: absolute;
+  display: block;
+  top: 0.03em;
+  left: -1.05em;
+  width: 0;
+  height: 0;
+  border-right: 1em solid transparent;
+  border-bottom: 0.7em solid var(--star-color);
+  border-left: 1em solid transparent;
+  transform: rotate(-70deg);
+  content: "";
+}
+
+/* Animation for falling stars */
+@keyframes falling {
   0% {
-    text-shadow: 0 0 5px #f5cc06;
+    transform: translateY(-20vh); /* Start slightly above the viewport */
   }
   100% {
-    text-shadow: 0 0 20px #f5cc06;
+    transform: translateY(120vh); /* Move beyond the viewport height */
   }
 }
