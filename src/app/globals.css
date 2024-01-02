@@ -12,11 +12,17 @@
 html {
   background: #000000;
 }
+/* 
+css variables 
+*/
+:root {
+  --feliz-font-size: 10vmin;
+}
 /* Other initial styles */
 .feliz {
   width: 100%;
   font-family: "Pacifico", cursive;
-  font-size: 100px;
+  font-size: var(--feliz-font-size);
   font-weight: 700;
   color: #f48fb1;
   text-align: center;
@@ -109,7 +115,7 @@ html {
 @media (min-width: 1200px) {
   /* Adjustments for 1200px */
   .feliz {
-    font-size: 100px;
+    font-size: var(--feliz-font-size);
   }
 
   .ano_novo > div {
