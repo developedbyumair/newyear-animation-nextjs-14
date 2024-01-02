@@ -9,7 +9,7 @@ export default function HomePage() {
           top: ["20%", "50%"],
         }}
       >
-        Lets Enter the New Year
+        We got an extra day this year, so let's accomplish something great!
       </Box>
       <Box className="ano_novo star">
         <Box>202</Box>
